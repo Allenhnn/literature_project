@@ -1,6 +1,14 @@
 $(document).ready(function () {
     var log = 0
-
+    $(".main_btn").on("scroll")
+    $(".hori_carousel").owlCarousel({
+        loop:true,
+        items:1,
+        autoplay: true,
+        autoplayTimeout: 4200,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
+    })
 
     // mouseover
     $(document).on('mousemove', function (e) {

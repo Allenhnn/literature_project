@@ -205,7 +205,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;
+    color: white !important;
     font-family: f1;
     font-size: 1.5rem;
     margin: 0 5rem;
@@ -260,7 +260,7 @@ a:hover {
 }
 
 .fillbg {
-    background: white;
+    background: #252525;
 
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -300,9 +300,9 @@ a:hover {
     /* --color2: rgb(74, 164, 216);
     --color1: rgb(131, 121, 227); */
     position: absolute;
-    bottom: -30%;
+    bottom: -1%;
     left: -2%;
-    height: 45rem;
+    height: 30rem;
     aspect-ratio: 1/1;
     backdrop-filter: blur(10px);
     border-radius: 50%;
@@ -344,7 +344,75 @@ a:hover {
     height: 10rem;
     aspect-ratio: 1/1;
 }
+.ball3{
+    position: absolute;
+    bottom: 0%;
+    left: 38%;
+    height: 20rem;
+    aspect-ratio: 1/1;
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    background-color: rgba(74, 164, 216,0.2);
+    z-index: 999;
+}
+.ball3::before{
+    content: "";
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    background:transparent;
+    border: 5px solid rgba(74, 164, 216,0.2);
+    border-radius: 50%;
+    height: 6rem;
+    aspect-ratio: 1/1;
+}
+.ball4{
+    /* --color2: rgb(74, 164, 216);
+    --color1: rgb(131, 121, 227); */
+    position: absolute;
+    top:2%;
+    left: 58%;
+    height: 30rem;
+    aspect-ratio: 1/1;
+    background-color: rgba(131, 121, 227, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    z-index: 999;
+}
+.ball4::before{
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    background:transparent;
+    border: 5px solid rgba(131, 121, 227, 0.2);
+    border-radius: 50%;
+    height: 10rem;
+    aspect-ratio: 1/1;
+}
 
+.ball5{
+    position: absolute;
+    bottom: 0%;
+    left: 78%;
+    height: 20rem;
+    aspect-ratio: 1/1;
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    background-color: rgba(74, 164, 216,0.2);
+    z-index: 999;
+}
+.ball5::before{
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    background:transparent;
+    border: 5px solid rgba(74, 164, 216,0.2);
+    border-radius: 50%;
+    height: 6rem;
+    aspect-ratio: 1/1;
+}
 #sec1 {
     display: flex;
     justify-content: center;
@@ -360,6 +428,7 @@ a:hover {
     font-size: 2rem;
     font-family: f1;
     background: linear-gradient(90deg, var(--color2), var(--color1));
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.637);
     border-radius: 50px;
     color: white;
     border: none;
@@ -368,6 +437,7 @@ a:hover {
 
 .main_btn:hover {
     opacity: 0.5;
+    color: white;
 }
 
 .border-container {
@@ -520,6 +590,17 @@ a:hover {
     cursor: pointer;
     object-fit: cover;
 }
+.copyright{
+    height: 100vh;
+    width: 3vw;
+    background-color: black;
+    writing-mode: vertical-lr;
+    font-size: 1.25rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* sec2 */
 #sec2 {
@@ -529,7 +610,7 @@ a:hover {
     position: relative;
     display: flex;
     align-items: center;
-    height: 500vw;
+    height: 502.5vw;
     width: 100%;
 }
 
@@ -858,12 +939,12 @@ a:hover {
     /* border: 5px solid  var(--color2); */
 }
 
-.hori_item_100:nth-child(even):hover .hori2_num {
+.hori_item_100:nth-child(odd):hover .hori2_num {
     color: var(--color1);
     -webkit-text-stroke: 0;
 }
 
-.hori_item_100:nth-child(odd):hover .hori2_num {
+.hori_item_100:nth-child(even):hover .hori2_num {
     color: var(--color2);
     -webkit-text-stroke: 0;
 }
@@ -1451,6 +1532,31 @@ footer {
     font-weight: bold;
     font-size: 1.25rem;
 }
+.hori_carousel{
+    height: 100vh;
+    width: 100vw;
+}
+.hori_carousel img{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+.alert_frame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;   
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    background-color: black;
+    color: white;
+    font-size: 3.5rem;
+    opacity: 0;
+    pointer-events: none;
+}
 
 @keyframes shine {
     0% {
@@ -1497,51 +1603,10 @@ footer {
     :root {
         font-size: 8px;
     }
-    .ball1,.ball2{
+    #sec2{
         display: none;
     }
-    .hori_item_100{
-        height: 100vh !important;
-    }
-    .v-auto{
-        height: initial;
-    }
-    #sec2{
-        height: 100vh;
-        width: 100%;
-    }
-    .sec1_text {
-        width: 100%;
-    }
-    .hori_3_img img{
-        height: 40rem;
-    }
-
-    .rwd-flex {
-        flex-direction: column;
-    }
-
-    #sec2 {
-        height: 150vh;
-    }
-
-    .b0 .horizontal_absolute {
-        position: relative;
-    }
-
-    .fx .horizontal_absolute {
-        position: relative !important;
-    }
-
-    .hori_item_100 {
-        /* background-color: var(--color1); */
-        width: 100vw;
-        height: auto;
-    }
-
-    .hori_item_200 {
-        /* background-color: var(--color1); */
-        width: 100vw;
-        height: auto;
+    .alert_frame{
+        opacity: 1;
     }
 }
